@@ -1,9 +1,9 @@
-pip install Flask
+pip install Flask;
 
-pip install Flask-Login
+pip install Flask-Login;
 
-pip install python-dotenv
+pip install python-dotenv;
 
-pip show Flask-Session
+pip show Flask-Session;
 
-pip install cs50
+pip install cs50;
