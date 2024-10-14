@@ -7,7 +7,7 @@
 - [Installation and Setup](#installation-and-setup)
 - [How to Use](#how-to-use)
 - [Detailed Description of Files](#detailed-description-of-files)
-- [Project Folder Structure](#project-folder-struc)
+- [Project Folder Structure](#project-folder-structure)
 
 
 ## Introduction
