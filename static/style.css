@@ -1,0 +1,245 @@
+body, button, input{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    justify-content: center;
+}
+
+body{
+    background-color: #d5d8dc  ;
+}
+
+a { 
+    text-decoration: none;
+    color:black;
+}
+
+button{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#clockPomo{
+    height: 450px;
+    width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #b3bbc4 ;
+
+}
+#cover_clockPomo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+#numPomo{
+    font-size: 150px;
+    margin:20px;
+    align-items: center;
+    top:110px;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.function_button {
+    position: absolute;
+    right:10px;
+    top:15px;
+}
+
+.task_bar{
+    display: inline-block;
+}
+
+h1{
+    margin: 5px;
+    padding: 5px;
+    font-size: 30px;
+    height: 30px;
+    float: left;
+}
+
+.state{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+.state button, #startBtn{
+    font-size: 25px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    color:#273746;
+}
+
+#startBtn{
+    height:85px;
+    width:170px;
+    font-size: 50px;
+    box-sizing: border-box;   
+}
+
+.state button:hover, #startBtn:hover, 
+a:not(.title):hover, button:hover {
+    color: #85929e ;
+    cursor: pointer;
+}
+
+.state button:active, #startBtn:active
+,button:active {
+    transform: scale(0.95); 
+    background-color: #d5d8dc; 
+}
+
+.title {
+    display: flex;
+    align-items: center; 
+}
+
+#imgClock {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px; 
+    margin-left: 20px;
+}
+
+.title h1 {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    margin: 0; 
+    padding: 0;
+    margin-top: 10px;
+}
+
+#imgSkip{
+    height: 100px;
+    width: 110px;
+}
+
+#startBtn, #skipBtn {
+    box-sizing: border-box;   
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center; 
+    vertical-align: middle; 
+    margin-left: 120px;
+}
+
+#skipBtn{
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#skipBtn:hover {
+    opacity: 0.8; /* Thêm hiệu ứng mờ khi di chuột qua */
+}
+
+.setting{
+    display: none;
+    background-color: #d5d8dc;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.settingContent{
+    position: relative;
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+    text-align: center ;
+    border-radius: 8px;
+    flex-direction: column;
+    
+
+}
+.settingContent input {
+    display: inline-block;
+    width: 15%;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.settingContent button {
+    display: block;
+    margin: 30px auto 0 auto; 
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close{
+    color: #aaa;
+    float: right;
+    position: absolute;
+    top: 0px; 
+    right: 10px; 
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,.close:focus{
+    cursor: pointer;
+    color: #273746;
+}
+
+.Summarize{
+    display: none;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left:0;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Summarize_content{
+    position: relative;
+    background-color:azure;
+    width: 20%;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    z-index: 1;
+    height: 450px;
+    width: 600px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#chart {
+    margin-top: 15%;
+    padding: 30px;
+}
+
+#label_Summarize{
+    margin: 10px auto 0;
+}
+
+#ting, #click{
+    display: none;
+}

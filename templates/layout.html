@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="/static/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Pomo50</title>
+    </head>
+    <body>
+        {% block body %}
+        <div class="task_bar">
+                <div class="title">
+                    <h1><img id="imgClock" src="/static/icon/time.png"><a class="title">Pomo50</a></h1>
+                </div>
+                
+                <a href="/"><img></a>
+            <div class="function_button">
+                <button id="settingBtn">Setting</button>
+                <button id="Summarize">Summarize</button>
+                {% if session["user_id"] %}
+                    <a href="/logout"><button>Logout</button></a>
+                {% else %}
+                    <a href="/login"><button>Login</button></a>
+                {% endif %} 
+            </div>
+        </div>
+        <br><br>
+        {% endblock %}
+        {% block main %}{% endblock %}
+    <div id="cover_clockPomo">
+        <div id="clockPomo">
+            <label id="numPomo">25:00</label><br>
+            <button id="startBtn">Start</button>
+            <button id="skipBtn"><img src="/static/icon/right.png" id="imgSkip"></button>
+            <div class="state">
+            <button id="pomoBtn">Pomodoro</button>
+            <button id="restBtn">Rest</button>
+            <button id="longrestBtn">Long Rest</button>
+            </div>
+        </div>
+    </div>
+    <div id="settingBoard" class="setting">
+        <div class="settingContent">
+            <span class="close">&times;</span>
+            <label for="pomoDuration">Duration (minutes)</label><br>
+            <input type="number" id="pomoDuration" min="1" max="99">
+
+            <input type="number" id="shortBreak" min="1" max="99" >
+
+            <input type="number" id="longBreak" min="1" max="99">
+            <button id="saveSettings">Save</button>
+        </div>
+    </div>
+    <div class="Summarize" id="drawBoard">
+        <div class="Summarize_content" id="drawContent">
+            <label id="label_Summarize">Summarize</label>
+            {% if session["user_id"] %}
+                <canvas id="chart"></canvas>
+            {% else %}
+                <br><br><span>You need to login</span>
+            {% endif %} 
+            <span class="close">&times;</span>
+            
+        </div>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="/static/summarize.js"></script>
+        <script src="/static/clock.js"></script>
+        <script src="/static/setting.js"></script>
+        <audio src="/static/sound/click.mp3" type="mp3" id="click" controls></audio>
+        <audio src="/static/sound/ting.mp3" type="mp3" id="ting" controls></audio>
+    </body>
+</html>
