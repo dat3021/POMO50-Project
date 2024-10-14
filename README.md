@@ -10,22 +10,29 @@
 
 
 ## Introduction
-POMO50 is a web-based Pomodoro timer application designed to help users manage their work or study time more effectively. Users can log in, set Pomodoro timers, track their work hours, and save usage history.
+POMO50 is a web-based Pomodoro timer application designed to help users manage their work or study time more effectively. This Pomodoro application helps users manage their work and break times effectively using the Pomodoro technique. The technique consists of 25-minute work sessions alternated with 5-minute short breaks, and a longer break. Users can customize their work and break times, track their work history, and view statistics in chart form.
 
 ## Features
-- **User Account Management**: Register, log in, and log out features.
-- **Pomodoro Timer**: Users can set countdown timers for work sessions and breaks.
-- **Usage History Tracking**: The app stores users' work time by day, helping them track productivity.
-- **Auto-Save Data**: Pomodoro sessions and history are saved in the database even after users log out.
-- **Progress Reports**: Display the hours worked by each day when users log back in.
+- **Pomodoro Timer**: Time tracking based on the Pomodoro technique, allowing customization between Pomodoro mode, short break, and long break (default: 25 minutes work, 5 minutes break, 15 minutes long break).
+- **Setting:** Allows users to adjust work and break intervals according to their preferences.
+- **Progress Reports**: Displays a chart showing the total time (calculated in minutes) spent working in Pomodoro sessions.
+- **User Account Management:** Login functionality enables users to save the time they’ve worked on a daily basis.
+- **Notification sound**: Plays a sound when the work or break session ends.
 
 ## Technologies Used
 This project was built using the following technologies:
-- **HTML/CSS/JavaScript**: Front-end development for a user-friendly interface.
-- **Python & Flask**: Backend logic and web server development.
-- **SQL**: Database management to store user information and Pomodoro history.
-- **VS Code**: Main development environment.
-- **Heroku**: (Optional) Deploy the application in a production environment.
+- **Frontend**:
+    - **HTML/CSS**: Building the user interface.
+    - **JavaScript**: Handling client-side logic, including countdown timer functionality and interaction with the API.
+- **Backend**:
+    - **Python with Flask**: Creating an API to serve data and store and retrieve work time data.
+- **Database**:
+    - **SQLite**: Storing users' work time data.
+- **Libraries**:
+    - **Chart.js**: Displaying statistics of work time in chart form.
+    - **Fetch API**: Sending and receiving data from the server.
+- **IDE**:
+    - **VS Code**.
 
 ## Installation and Setup
 
@@ -48,19 +55,13 @@ This project was built using the following technologies:
     pip install -r requirements.txt
     ```
 
-3. Initialize the database:
-
-    ```bash
-    python init_db.py
-    ```
-
-4. Run the Flask application:
+3. Run the Flask application:
 
     ```bash
     flask run
     ```
 
-5. Open the app in your browser at `http://127.0.0.1:5000/`.
+4. Open the app in your browser at `http://127.0.0.1:5000/`.
 
 ## Project Structure
 
