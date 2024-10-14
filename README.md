@@ -1,7 +1,7 @@
 # POMO50 - Pomodoro Timer Project
 
 ## Mục Lục
-- [Giới thiệu](#giới-thiệu)
+- [Giới thiệu]
 - [Các Tính Năng](#các-tính-năng)
 - [Công Nghệ Sử Dụng](#công-nghệ-sử-dụng)
 - [Cài Đặt và Chạy Dự Án](#cài-đặt-và-chạy-dự-án)
