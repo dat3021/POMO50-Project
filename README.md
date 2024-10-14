@@ -7,8 +7,7 @@
 - [Installation and Setup](#installation-and-setup)
 - [Project Structure](#project-structure)
 - [How to Use](#how-to-use)
-- [Contributing](#contributing)
-- [Contact](#contact)
+
 
 ## Introduction
 POMO50 is a web-based Pomodoro timer application designed to help users manage their work or study time more effectively. Users can log in, set Pomodoro timers, track their work hours, and save usage history.
@@ -76,3 +75,7 @@ POMO50-Project/
 ├── requirements.txt  # List of required packages
 ├── README.md         # Project documentation
 └── .gitignore        # File to exclude unnecessary files from commits
+```
+
+## How to Use
+
