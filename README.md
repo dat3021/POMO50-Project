@@ -1,4 +1,6 @@
 # POMO50 - Pomodoro Timer Project
+#### Video Demo:  <URL HERE>
+#### Description: see the [Introduction](#introduction)
 
 ## Table of Contents
 - [Introduction](#introduction)
