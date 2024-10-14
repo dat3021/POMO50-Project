@@ -5,8 +5,9 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation and Setup](#installation-and-setup)
-- [Project Structure](#project-structure)
 - [How to Use](#how-to-use)
+- [Detailed Description of Files](#detailed-description-of-files)
+- [Project Folder Structure](#project-folder-struc)
 
 
 ## Introduction
@@ -63,20 +64,66 @@ This project was built using the following technologies:
 
 4. Open the app in your browser at `http://127.0.0.1:5000/`.
 
-## Project Structure
-
-```bash
-POMO50-Project/
-│
-├── static/           # Folder containing static files (CSS, JavaScript, images)
-├── templates/        # Folder containing HTML templates
-├── app.py            # Main Flask application file
-├── init_db.py        # Script to initialize the database
-├── models.py         # Database model definitions
-├── requirements.txt  # List of required packages
-├── README.md         # Project documentation
-└── .gitignore        # File to exclude unnecessary files from commits
-```
 
 ## How to Use
+- **Start a Pomodoro Session**: Press the "Start" button to begin the countdown for the work time (default is 25 minutes).
+- **Rest After Completing a Work Session**: Once the work time is over, a sound will signal the end, and the rest period will begin.
+- **Switch to Short or Long Break**: Press the "Rest" button to switch to a short break (default is 5 minutes) or "Long Rest" to switch to a long break (default is 15 minutes).
+- **Customize Time**: Press the "Settings" button to open the time settings panel. Here, users can customize the work and rest durations. Click "Save" to save the settings.
+- **Log In and View Statistics Chart**: Log in (or register) so the system can save the counted Pomodoro time. Then click the "Summarize" button to open a statistics chart showing the user's work time for each day.
 
+## Detailed Description of Files
+
+### 1. **app.py**
+
+- Handles the backend of the application using Flask.
+- Main routes:
+    - `/`: Displays the main Pomodoro page.
+    - `/save_settings`: Saves the user's Pomodoro time settings.
+    - `/get_settings`: Retrieves the Pomodoro time settings when the user logs back in.
+    - `/logtime`: Stores the completion time of each Pomodoro session.
+    - `/get_data`: Fetches data to display the working time statistics chart.
+
+### 2. **layout.html**
+
+- The main interface of the application.
+- Contains UI components such as the countdown timer, start/stop/settings buttons, and the chart display area.
+
+### 3. **style.css and style2.css**
+
+- Defines the presentation and formatting for the user interface.
+- Key components:
+    - Formatting for the countdown timer and time settings panel.
+    - Styles for functional buttons and the time settings dialog, as well as the statistics chart.
+
+### 4. **JavaScript file**
+
+- Contains functions that handle frontend logic:
+    - **Countdown function**: Counts down the working and resting time, displaying the results on the timer.
+    - **Data submission**: Uses Fetch API to send the user's completion time to the server for storage.
+    - **Customize time**: Receives data from the user, sends it to the server, and displays the new settings.
+    - **Display chart**: Retrieves data from the server and visualizes it as a chart using Chart.js.
+
+### 5. **/static/sound/**:
+
+- Contains sound files that notify users when the working and resting times are over.
+
+### 6. **/static/icon/**:
+
+- Contains images used on the website.
+
+### 7. **/templates/**:
+
+- Contains HTML files used by Flask to render the user interface.
+
+## Project Folder Structure
+
+- `/static/`: Contains static files such as CSS, JavaScript, images, and sound.
+    - `/static/css/style.css`: Contains CSS rules for styling the application's interface.
+    - `/static/css/style2.css`: Contains additional CSS rules for styling the login application's interface.
+    - `/static/(js-file):` Handles the main logic of the Pomodoro application (countdown, API interaction, chart display).
+    - `/static/sound/`: Directory containing notification sound files.
+    - `/static/icon/`: Directory containing image files.
+- `/templates/`: Contains HTML files used by Flask to render the interface.
+- `app.py`: The main file of the Flask application, managing routes and handling server-side logic.
+- `data.db`: SQLite file containing information about users' working hours.
