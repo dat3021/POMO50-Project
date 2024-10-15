@@ -13,7 +13,7 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-db = SQL("sqlite:///data.db")
+db = SQL("sqlite:////home/dat3021/POMO50-Project/data.db")
 
 app.jinja_env.auto_reload = True
 
