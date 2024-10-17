@@ -55,7 +55,7 @@ This project was built using the following technologies:
 2. Install dependencies:
 
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirement.txt
     ```
 
 3. Run the Flask application:
