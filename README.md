@@ -1,5 +1,4 @@
 # POMO50 - Pomodoro Timer Project
-#### Video Demo:  https://youtu.be/YoodFLGPNlk
 #### Description: see the [Introduction](#introduction)
 #### URL: https://dat3021.pythonanywhere.com/
 
